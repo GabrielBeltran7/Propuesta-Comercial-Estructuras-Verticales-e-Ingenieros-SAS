@@ -15,6 +15,7 @@ const App = () => {
   return (
     <div>
       <h1>Generador de Propuestas Comerciales</h1>
+      
       {!proposalData ? (
         <ProposalForm onSubmit={handleFormSubmit} />
       ) : (

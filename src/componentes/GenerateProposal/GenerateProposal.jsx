@@ -91,7 +91,7 @@ const ProposalDocument = ({ proposalData }) => {
     },
     container: {
       marginBottom: 20,
-    },
+    }
   });
 
   const footer = (
@@ -338,9 +338,12 @@ const ProposalDocument = ({ proposalData }) => {
     </Document>
   );
 };
-
+const handleReload = () => {
+  window.location.reload();  // Recarga la página
+};
 const GenerateProposal = ({ proposalData }) => {
   return (
+    <>
     <div className="flex justify-center items-center py-4">
       <PDFDownloadLink
         document={<ProposalDocument proposalData={proposalData} />}
@@ -348,7 +351,12 @@ const GenerateProposal = ({ proposalData }) => {
       >
         {({ loading }) => (loading ? "Generando PDF..." : "Descargar PDF")}
       </PDFDownloadLink>
+      
     </div>
+    <button onClick={handleReload} >
+        Actualizar Página
+      </button>
+    </>
   );
 };
 
@@ -384,8 +392,9 @@ export default GenerateProposal;
 //       height: "100%",
 //     },
 //     image: {
-     
-//       objectFit: "contain",
+//       width: "100%",
+//       height: "100%",
+//       objectFit: "fill",
 //     },
 //     imageFirma: {
 //       width: "32%",
@@ -446,7 +455,7 @@ export default GenerateProposal;
 //     },
 //     container: {
 //       marginBottom: 20,
-//     },
+//     }
 //   });
 
 //   const footer = (
@@ -693,9 +702,12 @@ export default GenerateProposal;
 //     </Document>
 //   );
 // };
-
+// const handleReload = () => {
+//   window.location.reload();  // Recarga la página
+// };
 // const GenerateProposal = ({ proposalData }) => {
 //   return (
+//     <>
 //     <div className="flex justify-center items-center py-4">
 //       <PDFDownloadLink
 //         document={<ProposalDocument proposalData={proposalData} />}
@@ -703,7 +715,12 @@ export default GenerateProposal;
 //       >
 //         {({ loading }) => (loading ? "Generando PDF..." : "Descargar PDF")}
 //       </PDFDownloadLink>
+      
 //     </div>
+//     <button onClick={handleReload} >
+//         Actualizar Página
+//       </button>
+//     </>
 //   );
 // };
 

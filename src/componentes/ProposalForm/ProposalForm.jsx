@@ -43,7 +43,9 @@ const ProposalForm = ({ onSubmit }) => {
   };
 
   return (
+    
     <form onSubmit={handleSubmit} className={styles.form}>
+    
       <div className={styles.row}>
         <label className={styles.label}>Fecha:
           <input type="date" value={date} onChange={(e) => setDate(e.target.value)} required className={styles.input} />
@@ -87,6 +89,7 @@ const ProposalForm = ({ onSubmit }) => {
       </label>
 
       <button type="submit" className={styles.button}>Generar Propuesta</button>
+      
     </form>
   );
 };
