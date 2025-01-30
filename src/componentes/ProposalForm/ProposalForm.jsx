@@ -72,7 +72,7 @@ const ProposalForm = ({ onSubmit }) => {
       <label className={styles.label}>Ciudad del Cliente:
         <input type="text" name="clientCity" value={formData.clientCity} onChange={handleChange} required className={styles.input} />
       </label>
-      <label className={styles.label}>Ref:
+      <label className={styles.label}>Referencia:
         <textarea name="ref" value={formData.ref} onChange={handleChange} required className={styles.input} />
       </label>
       <label className={styles.label}>Objetivo de la Propuesta:
